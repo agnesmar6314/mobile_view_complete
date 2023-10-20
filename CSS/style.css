@@ -3,6 +3,11 @@ body {
     color: #054fb9 ;
 }
 
+header {
+    animation-name: change_heading_color;
+    animation-duration: 4s;
+}
+
 h1 {
     font-size: 30px;
     font-family: "Lucida Console", "Courier New", monospace;
@@ -135,8 +140,17 @@ a.skip-main:focus, a.skip-main:active {
     
 }
 
+@keyframes change_heading_color {
+    from {color: #054fb9;}
+    to {color: yellow;}
+  }
+
 @media (prefers-reduced-motion:reduce) {
     .animation {
+        display: none;
+    }
+
+    header {
         animation: none;
     }
 
